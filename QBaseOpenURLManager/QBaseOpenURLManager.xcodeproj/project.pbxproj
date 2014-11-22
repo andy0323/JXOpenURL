@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1A52EF91A20890800919AEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A52EF81A20890800919AEA /* main.m */; };
+		A1A52EFC1A20890800919AEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A52EFB1A20890800919AEA /* AppDelegate.m */; };
+		A1A52EFF1A20890800919AEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A52EFE1A20890800919AEA /* ViewController.m */; };
+		A1A52F021A20890800919AEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1A52F001A20890800919AEA /* Main.storyboard */; };
+		A1A52F041A20890800919AEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1A52F031A20890800919AEA /* Images.xcassets */; };
+		A1A52F071A20890800919AEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1A52F051A20890800919AEA /* LaunchScreen.xib */; };
+		A1A52F131A20890800919AEA /* QBaseOpenURLManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A52F121A20890800919AEA /* QBaseOpenURLManagerTests.m */; };
+		A1A52F1F1A20892700919AEA /* QBaseOpenURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A52F1E1A20892700919AEA /* QBaseOpenURLManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1A52F0D1A20890800919AEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1A52EEB1A20890800919AEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1A52EF21A20890800919AEA;
+			remoteInfo = QBaseOpenURLManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A1A52EF31A20890800919AEA /* QBaseOpenURLManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QBaseOpenURLManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A52EF71A20890800919AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1A52EF81A20890800919AEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1A52EFA1A20890800919AEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A1A52EFB1A20890800919AEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A1A52EFD1A20890800919AEA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A1A52EFE1A20890800919AEA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A1A52F011A20890800919AEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A1A52F031A20890800919AEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A1A52F061A20890800919AEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A1A52F0C1A20890800919AEA /* QBaseOpenURLManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QBaseOpenURLManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A52F111A20890800919AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1A52F121A20890800919AEA /* QBaseOpenURLManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QBaseOpenURLManagerTests.m; sourceTree = "<group>"; };
+		A1A52F1D1A20892700919AEA /* QBaseOpenURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseOpenURLManager.h; sourceTree = "<group>"; };
+		A1A52F1E1A20892700919AEA /* QBaseOpenURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseOpenURLManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1A52EF01A20890800919AEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A52F091A20890800919AEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1A52EEA1A20890800919AEA = {
+			isa = PBXGroup;
+			children = (
+				A1A52F1C1A20891800919AEA /* src */,
+				A1A52EF51A20890800919AEA /* QBaseOpenURLManager */,
+				A1A52F0F1A20890800919AEA /* QBaseOpenURLManagerTests */,
+				A1A52EF41A20890800919AEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1A52EF41A20890800919AEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1A52EF31A20890800919AEA /* QBaseOpenURLManager.app */,
+				A1A52F0C1A20890800919AEA /* QBaseOpenURLManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1A52EF51A20890800919AEA /* QBaseOpenURLManager */ = {
+			isa = PBXGroup;
+			children = (
+				A1A52EFA1A20890800919AEA /* AppDelegate.h */,
+				A1A52EFB1A20890800919AEA /* AppDelegate.m */,
+				A1A52EFD1A20890800919AEA /* ViewController.h */,
+				A1A52EFE1A20890800919AEA /* ViewController.m */,
+				A1A52F001A20890800919AEA /* Main.storyboard */,
+				A1A52F031A20890800919AEA /* Images.xcassets */,
+				A1A52F051A20890800919AEA /* LaunchScreen.xib */,
+				A1A52EF61A20890800919AEA /* Supporting Files */,
+			);
+			path = QBaseOpenURLManager;
+			sourceTree = "<group>";
+		};
+		A1A52EF61A20890800919AEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1A52EF71A20890800919AEA /* Info.plist */,
+				A1A52EF81A20890800919AEA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1A52F0F1A20890800919AEA /* QBaseOpenURLManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1A52F121A20890800919AEA /* QBaseOpenURLManagerTests.m */,
+				A1A52F101A20890800919AEA /* Supporting Files */,
+			);
+			path = QBaseOpenURLManagerTests;
+			sourceTree = "<group>";
+		};
+		A1A52F101A20890800919AEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1A52F111A20890800919AEA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1A52F1C1A20891800919AEA /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A1A52F1D1A20892700919AEA /* QBaseOpenURLManager.h */,
+				A1A52F1E1A20892700919AEA /* QBaseOpenURLManager.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1A52EF21A20890800919AEA /* QBaseOpenURLManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1A52F161A20890800919AEA /* Build configuration list for PBXNativeTarget "QBaseOpenURLManager" */;
+			buildPhases = (
+				A1A52EEF1A20890800919AEA /* Sources */,
+				A1A52EF01A20890800919AEA /* Frameworks */,
+				A1A52EF11A20890800919AEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QBaseOpenURLManager;
+			productName = QBaseOpenURLManager;
+			productReference = A1A52EF31A20890800919AEA /* QBaseOpenURLManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1A52F0B1A20890800919AEA /* QBaseOpenURLManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1A52F191A20890800919AEA /* Build configuration list for PBXNativeTarget "QBaseOpenURLManagerTests" */;
+			buildPhases = (
+				A1A52F081A20890800919AEA /* Sources */,
+				A1A52F091A20890800919AEA /* Frameworks */,
+				A1A52F0A1A20890800919AEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1A52F0E1A20890800919AEA /* PBXTargetDependency */,
+			);
+			name = QBaseOpenURLManagerTests;
+			productName = QBaseOpenURLManagerTests;
+			productReference = A1A52F0C1A20890800919AEA /* QBaseOpenURLManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1A52EEB1A20890800919AEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Andy Jin";
+				TargetAttributes = {
+					A1A52EF21A20890800919AEA = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					A1A52F0B1A20890800919AEA = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = A1A52EF21A20890800919AEA;
+					};
+				};
+			};
+			buildConfigurationList = A1A52EEE1A20890800919AEA /* Build configuration list for PBXProject "QBaseOpenURLManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1A52EEA1A20890800919AEA;
+			productRefGroup = A1A52EF41A20890800919AEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1A52EF21A20890800919AEA /* QBaseOpenURLManager */,
+				A1A52F0B1A20890800919AEA /* QBaseOpenURLManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1A52EF11A20890800919AEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A52F021A20890800919AEA /* Main.storyboard in Resources */,
+				A1A52F071A20890800919AEA /* LaunchScreen.xib in Resources */,
+				A1A52F041A20890800919AEA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A52F0A1A20890800919AEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1A52EEF1A20890800919AEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A52F1F1A20892700919AEA /* QBaseOpenURLManager.m in Sources */,
+				A1A52EFF1A20890800919AEA /* ViewController.m in Sources */,
+				A1A52EFC1A20890800919AEA /* AppDelegate.m in Sources */,
+				A1A52EF91A20890800919AEA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A52F081A20890800919AEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A52F131A20890800919AEA /* QBaseOpenURLManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1A52F0E1A20890800919AEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1A52EF21A20890800919AEA /* QBaseOpenURLManager */;
+			targetProxy = A1A52F0D1A20890800919AEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A1A52F001A20890800919AEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1A52F011A20890800919AEA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A1A52F051A20890800919AEA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1A52F061A20890800919AEA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1A52F141A20890800919AEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1A52F151A20890800919AEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1A52F171A20890800919AEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QBaseOpenURLManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A1A52F181A20890800919AEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QBaseOpenURLManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A1A52F1A1A20890800919AEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QBaseOpenURLManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QBaseOpenURLManager.app/QBaseOpenURLManager";
+			};
+			name = Debug;
+		};
+		A1A52F1B1A20890800919AEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QBaseOpenURLManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QBaseOpenURLManager.app/QBaseOpenURLManager";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1A52EEE1A20890800919AEA /* Build configuration list for PBXProject "QBaseOpenURLManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A52F141A20890800919AEA /* Debug */,
+				A1A52F151A20890800919AEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1A52F161A20890800919AEA /* Build configuration list for PBXNativeTarget "QBaseOpenURLManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A52F171A20890800919AEA /* Debug */,
+				A1A52F181A20890800919AEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A1A52F191A20890800919AEA /* Build configuration list for PBXNativeTarget "QBaseOpenURLManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A52F1A1A20890800919AEA /* Debug */,
+				A1A52F1B1A20890800919AEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1A52EEB1A20890800919AEA /* Project object */;
+}
