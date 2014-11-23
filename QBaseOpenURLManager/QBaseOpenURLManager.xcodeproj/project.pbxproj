@@ -14,9 +14,9 @@
 		A1A52F041A20890800919AEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1A52F031A20890800919AEA /* Images.xcassets */; };
 		A1A52F071A20890800919AEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1A52F051A20890800919AEA /* LaunchScreen.xib */; };
 		A1A52F131A20890800919AEA /* QBaseOpenURLManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A52F121A20890800919AEA /* QBaseOpenURLManagerTests.m */; };
-		A1A52F1F1A20892700919AEA /* QBaseOpenURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A52F1E1A20892700919AEA /* QBaseOpenURLManager.m */; };
-		A1A52F281A20E3CA00919AEA /* QBaseOpenURLTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A52F271A20E3CA00919AEA /* QBaseOpenURLTask.m */; };
 		A1A52F2B1A20EFB800919AEA /* DemoTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A52F2A1A20EFB800919AEA /* DemoTask.m */; };
+		A1A52F6D1A2235A800919AEA /* QBaseOpenURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A52F6A1A2235A800919AEA /* QBaseOpenURLManager.m */; };
+		A1A52F6E1A2235A800919AEA /* QBaseOpenURLTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A52F6C1A2235A800919AEA /* QBaseOpenURLTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +43,12 @@
 		A1A52F0C1A20890800919AEA /* QBaseOpenURLManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QBaseOpenURLManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A52F111A20890800919AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1A52F121A20890800919AEA /* QBaseOpenURLManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QBaseOpenURLManagerTests.m; sourceTree = "<group>"; };
-		A1A52F1D1A20892700919AEA /* QBaseOpenURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseOpenURLManager.h; sourceTree = "<group>"; };
-		A1A52F1E1A20892700919AEA /* QBaseOpenURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseOpenURLManager.m; sourceTree = "<group>"; };
-		A1A52F261A20E3CA00919AEA /* QBaseOpenURLTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseOpenURLTask.h; sourceTree = "<group>"; };
-		A1A52F271A20E3CA00919AEA /* QBaseOpenURLTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseOpenURLTask.m; sourceTree = "<group>"; };
 		A1A52F291A20EFB800919AEA /* DemoTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTask.h; sourceTree = "<group>"; };
 		A1A52F2A1A20EFB800919AEA /* DemoTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTask.m; sourceTree = "<group>"; };
+		A1A52F691A2235A800919AEA /* QBaseOpenURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseOpenURLManager.h; sourceTree = "<group>"; };
+		A1A52F6A1A2235A800919AEA /* QBaseOpenURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseOpenURLManager.m; sourceTree = "<group>"; };
+		A1A52F6B1A2235A800919AEA /* QBaseOpenURLTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBaseOpenURLTask.h; sourceTree = "<group>"; };
+		A1A52F6C1A2235A800919AEA /* QBaseOpenURLTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBaseOpenURLTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 		A1A52EEA1A20890800919AEA = {
 			isa = PBXGroup;
 			children = (
-				A1A52F1C1A20891800919AEA /* src */,
+				A1A52F681A2235A800919AEA /* src */,
 				A1A52EF51A20890800919AEA /* QBaseOpenURLManager */,
 				A1A52F0F1A20890800919AEA /* QBaseOpenURLManagerTests */,
 				A1A52EF41A20890800919AEA /* Products */,
@@ -131,15 +131,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A1A52F1C1A20891800919AEA /* src */ = {
+		A1A52F681A2235A800919AEA /* src */ = {
 			isa = PBXGroup;
 			children = (
-				A1A52F1D1A20892700919AEA /* QBaseOpenURLManager.h */,
-				A1A52F1E1A20892700919AEA /* QBaseOpenURLManager.m */,
-				A1A52F261A20E3CA00919AEA /* QBaseOpenURLTask.h */,
-				A1A52F271A20E3CA00919AEA /* QBaseOpenURLTask.m */,
+				A1A52F691A2235A800919AEA /* QBaseOpenURLManager.h */,
+				A1A52F6A1A2235A800919AEA /* QBaseOpenURLManager.m */,
+				A1A52F6B1A2235A800919AEA /* QBaseOpenURLTask.h */,
+				A1A52F6C1A2235A800919AEA /* QBaseOpenURLTask.m */,
 			);
-			path = src;
+			name = src;
+			path = ../src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,8 +243,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1A52F1F1A20892700919AEA /* QBaseOpenURLManager.m in Sources */,
-				A1A52F281A20E3CA00919AEA /* QBaseOpenURLTask.m in Sources */,
+				A1A52F6D1A2235A800919AEA /* QBaseOpenURLManager.m in Sources */,
+				A1A52F6E1A2235A800919AEA /* QBaseOpenURLTask.m in Sources */,
 				A1A52EFF1A20890800919AEA /* ViewController.m in Sources */,
 				A1A52F2B1A20EFB800919AEA /* DemoTask.m in Sources */,
 				A1A52EFC1A20890800919AEA /* AppDelegate.m in Sources */,

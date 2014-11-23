@@ -38,7 +38,7 @@
  */
 - (BOOL)canOpen:(NSString *)schemesURL
 {
-    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:schemesURL]];
+    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:rightSchemesURL(schemesURL)]];
 }
 
 /**
@@ -46,7 +46,7 @@
  */
 - (BOOL)openApp:(NSString *)schemesURL
 {
-    return [[UIApplication sharedApplication] openURL:[NSURL URLWithString:schemesURL]];
+    return [[UIApplication sharedApplication] openURL:[NSURL URLWithString:rightSchemesURL(schemesURL)]];
 }
 
 /**
@@ -59,17 +59,20 @@
     
     // 如果打不开, 进行回调
     if (!canOpen) {
-        completeBlock(NO);
+        if (completeBlock) {
+            completeBlock(NO);
+        }
         return;
     }
     
+    NSString *mySchemesURL = [self schemesURL];
     // 如果可以打开, 开始转换参数
     NSMutableDictionary *userInfo = [NSMutableDictionary new];
     
-    [userInfo setObject:schemesURL forKey:QBASE_OPEN_URL_KEY_SCHEMES_URL];
-    [userInfo setObject:task       forKey:QBASE_OPEN_URL_KEY_TASK];
-    [userInfo setObject:message    forKey:QBASE_OPEN_URL_KEY_MESSAGE];
-    [userInfo setObject:params     forKey:QBASE_OPEN_URL_KEY_PARAMS];
+    [userInfo setObject:mySchemesURL forKey:QBASE_OPEN_URL_KEY_SCHEMES_URL];
+    [userInfo setObject:task         forKey:QBASE_OPEN_URL_KEY_TASK];
+    [userInfo setObject:message      forKey:QBASE_OPEN_URL_KEY_MESSAGE];
+    [userInfo setObject:params       forKey:QBASE_OPEN_URL_KEY_PARAMS];
     
     // UserInfo 转化为Base64
     NSData *data = [NSJSONSerialization dataWithJSONObject:userInfo
@@ -160,7 +163,7 @@ NSData * decodeBase64(NSString *base64Str)
     
     if (CFBundleURLTypes.count > 0) {
         NSDictionary *CFBundleURLType = CFBundleURLTypes[0];
-        schemesURL = [CFBundleURLType objectForKey:@"CFBundleURLSchemes"];
+        schemesURL = [CFBundleURLType objectForKey:@"CFBundleURLSchemes"][0];
     }
     
     return schemesURL;
@@ -172,6 +175,25 @@ NSData * decodeBase64(NSString *base64Str)
         _taskStorage = [NSMutableDictionary new];
     }
     return _taskStorage;
+}
+
+#pragma mark -
+#pragma mark 特殊处理SchemesURL
+
+/**
+ *  处理SchemesURL异常
+ */
+NSString* rightSchemesURL(NSString *schemesURL)
+{
+    NSString *regex = [NSString stringWithFormat:@"^.*://.*$"];
+    NSPredicate *predicate =
+            [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    
+    if (![predicate evaluateWithObject:schemesURL]) {
+        return [schemesURL stringByAppendingString:@"://"];
+    }
+    
+    return schemesURL;
 }
 
 @end
