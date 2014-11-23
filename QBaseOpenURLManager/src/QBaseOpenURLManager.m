@@ -7,20 +7,31 @@
 //
 
 #import "QBaseOpenURLManager.h"
+#import "QBaseOpenURLTask.h"
+#import <objc/message.h>
 
-#define QBASE_KEY_SCHEMES_URL @"QBASE_KEY_SCHEMES_URL"
-#define QBASE_KEY_TARGET      @"QBASE_KEY_TARGET"
-#define QBASE_KEY_MESSAGE     @"QBASE_KEY_MSSAGE"
-#define QBASE_KEY_PARAMS      @"QBASE_KEY_PARAMS"
+#define QBASE_OPEN_URL_KEY_SCHEMES_URL @"QBASE_OPEN_URL_KEY_SCHEMES_URL"
+#define QBASE_OPEN_URL_KEY_TASK        @"QBASE_OPEN_URL_KEY_TASK"
+#define QBASE_OPEN_URL_KEY_MESSAGE     @"QBASE_OPEN_URL_KEY_MESSAGE"
+#define QBASE_OPEN_URL_KEY_PARAMS      @"QBASE_OPEN_URL_KEY_PARAMS"
 
 @interface QBaseOpenURLManager ()
 {
-    NSMutableDictionary *_targetStorage;
+    NSMutableDictionary *_taskStorage;
 }
-@property (nonatomic, readonly) NSMutableDictionary *targetStorage;
+@property (nonatomic, readonly) NSMutableDictionary *taskStorage;
 @end
 
 @implementation QBaseOpenURLManager
++ (instancetype)manager
+{
+    static QBaseOpenURLManager *manager;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [[self alloc] init];
+    });
+    return manager;
+}
 
 /**
  *  能否打开客户端
@@ -41,24 +52,24 @@
 /**
  *  打开客户端, 调用函数, 传出参数
  */
-- (void)openApp:(NSString *)schemesURL target:(id)target message:(NSString *)message params:(NSDictionary *)params complete:(void (^)(BOOL))completeBlock
+- (void)openApp:(NSString *)schemesURL task:(NSString *)task message:(NSString *)message params:(NSDictionary *)params complete:(void (^)(BOOL))completeBlock
 {
-//    // 判断是否可以打开客户端
-//    BOOL canOpen = [self canOpen:schemesURL];
-//    
-//    // 如果打不开, 进行回调
-//    if (!canOpen) {
-//        completeBlock(NO);
-//        return;
-//    }
+    // 判断是否可以打开客户端
+    BOOL canOpen = [self canOpen:schemesURL];
+    
+    // 如果打不开, 进行回调
+    if (!canOpen) {
+        completeBlock(NO);
+        return;
+    }
     
     // 如果可以打开, 开始转换参数
     NSMutableDictionary *userInfo = [NSMutableDictionary new];
     
-    [userInfo setObject:schemesURL forKey:QBASE_KEY_SCHEMES_URL];
-    [userInfo setObject:target     forKey:QBASE_KEY_TARGET];
-    [userInfo setObject:message    forKey:QBASE_KEY_MESSAGE];
-    [userInfo setObject:params     forKey:QBASE_KEY_PARAMS];
+    [userInfo setObject:schemesURL forKey:QBASE_OPEN_URL_KEY_SCHEMES_URL];
+    [userInfo setObject:task       forKey:QBASE_OPEN_URL_KEY_TASK];
+    [userInfo setObject:message    forKey:QBASE_OPEN_URL_KEY_MESSAGE];
+    [userInfo setObject:params     forKey:QBASE_OPEN_URL_KEY_PARAMS];
     
     // UserInfo 转化为Base64
     NSData *data = [NSJSONSerialization dataWithJSONObject:userInfo
@@ -89,12 +100,33 @@
                                                              options:0
                                                                error:nil];
     
-    NSString *schemesURL = [userInfo objectForKey:@"QBASE_KEY_SCHEMES_URL"];
-    NSString *target  = [userInfo objectForKey:@"QBASE_KEY_TARGET"];
-    NSString *message = [userInfo objectForKey:@"QBASE_KEY_MSSAGE"];
-    NSString *params  = [userInfo objectForKey:@"QBASE_KEY_PARAMS"];
+    NSString *schemesURL =
+                        [userInfo objectForKey:QBASE_OPEN_URL_KEY_SCHEMES_URL];
+    NSString *task    = [userInfo objectForKey:QBASE_OPEN_URL_KEY_TASK];
+    NSString *message = [userInfo objectForKey:QBASE_OPEN_URL_KEY_MESSAGE];
+    NSDictionary *params  =
+                        [userInfo objectForKey:QBASE_OPEN_URL_KEY_PARAMS];
 
+    QBaseOpenURLTask *taskTarget = [self.taskStorage objectForKey:task];
+    if (!taskTarget) {
+        Class TaskClass = NSClassFromString(task);
+        if (!task) {
+            NSLog(@"传参任务名称非法, 无法调用");
+            return;
+        }
+        taskTarget = [[TaskClass alloc] init];
+        [self.taskStorage setObject:taskTarget forKey:task];
+    }
     
+    taskTarget.backOpenURL = schemesURL;
+    
+    message = [message stringByAppendingString:@":"];
+    SEL messageSelector = NSSelectorFromString(message);
+    if ([taskTarget respondsToSelector:messageSelector]) {
+        ((void (*)(id,SEL,id))objc_msgSend)(taskTarget,
+                                            messageSelector,
+                                            params);
+    }
 }
 
 #pragma mark 
@@ -136,10 +168,10 @@ NSData * decodeBase64(NSString *base64Str)
 
 - (NSMutableDictionary *)targetStorage
 {
-    if (!_targetStorage) {
-        _targetStorage = [NSMutableDictionary new];
+    if (!_taskStorage) {
+        _taskStorage = [NSMutableDictionary new];
     }
-    return _targetStorage;
+    return _taskStorage;
 }
 
 @end

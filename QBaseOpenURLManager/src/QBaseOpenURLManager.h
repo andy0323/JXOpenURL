@@ -9,10 +9,15 @@
 #import "UIKit/UIKit.h"
 #import <Foundation/Foundation.h>
 
+@class QBaseOpenURLTask;
 @interface QBaseOpenURLManager : NSObject
 {
 
 }
+/**
+ *  单例
+ */
++ (instancetype)manager;
 
 /**
  *  客户端自身SchemesURL
@@ -42,19 +47,21 @@
  *  打开客户端, 调用函数, 传出参数
  *
  *  @param schemesURL    客户端 SchemesURL
- *  @param target        客户端 调用函数对象
+ *  @param task          客户端 调用函数对象名
  *  @param message       客户端 调用函数的函数名
  *  @param params        客户端 调用函数的参数
  *  @param completeBlock 完成调用, 回调是否成功打开
  */
 - (void)openApp:(NSString *)schemesURL
-         target:(NSString *)target
+           task:(NSString *)task
         message:(NSString *)message
          params:(NSDictionary *)params
        complete:(void (^)(BOOL canOpen))completeBlock;
 
 
-
+/**
+ *  处理OpenURL
+ */
 - (void)handleOpenURL:(NSURL *)openURL
              complete:(void (^)(BOOL hasSendMsg))completeBlock;
 

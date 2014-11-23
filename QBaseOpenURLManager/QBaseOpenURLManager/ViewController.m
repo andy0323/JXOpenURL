@@ -23,15 +23,15 @@
     
     
     [manager openApp:@"HELLO"
-              target:@"TTT"
+              task:@"DemoTask"
              message:@"test"
-              params:@{@"namd":@"andy"}
+              params:@{@"name":@"andy"}
             complete:^(BOOL canOpen) {
                 
                 
             }];
 
-    [manager handleOpenURL:[NSURL URLWithString:@"HELLO://eyJRQkFTRV9LRVlfU0NIRU1FU19VUkwiOiJIRUxMTyIsIlFCQVNFX0tFWV9QQVJBTVMiOnsibmFtZCI6ImFuZHkifSwiUUJBU0VfS0VZX01TU0FHRSI6InRlc3QiLCJRQkFTRV9LRVlfVEFSR0VUIjoiVFRUIn0="] complete:^(BOOL hasSendMsg) {
+    [manager handleOpenURL:[NSURL URLWithString:@"HELLO://eyJRQkFTRV9PUEVOX1VSTF9LRVlfVEFTSyI6IkRlbW9UYXNrIiwiUUJBU0VfT1BFTl9VUkxfS0VZX1NDSEVNRVNfVVJMIjoiSEVMTE8iLCJRQkFTRV9PUEVOX1VSTF9LRVlfUEFSQU1TIjp7Im5hbWQiOiJhbmR5In0sIlFCQVNFX09QRU5fVVJMX0tFWV9NRVNTQUdFIjoidGVzdCJ9"] complete:^(BOOL hasSendMsg) {
         
     }];
     
