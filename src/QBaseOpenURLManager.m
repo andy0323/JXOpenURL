@@ -33,6 +33,15 @@
     return manager;
 }
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        _taskStorage = [NSMutableDictionary new];
+    }
+    
+    return self;
+}
+
 /**
  *  能否打开客户端
  */
@@ -69,10 +78,10 @@
     // 如果可以打开, 开始转换参数
     NSMutableDictionary *userInfo = [NSMutableDictionary new];
     
-    [userInfo setObject:mySchemesURL forKey:QBASE_OPEN_URL_KEY_SCHEMES_URL];
-    [userInfo setObject:task         forKey:QBASE_OPEN_URL_KEY_TASK];
-    [userInfo setObject:message      forKey:QBASE_OPEN_URL_KEY_MESSAGE];
-    [userInfo setObject:params       forKey:QBASE_OPEN_URL_KEY_PARAMS];
+    save_setObj_forKey(userInfo, mySchemesURL, QBASE_OPEN_URL_KEY_SCHEMES_URL);
+    save_setObj_forKey(userInfo, task,         QBASE_OPEN_URL_KEY_TASK);
+    save_setObj_forKey(userInfo, message,      QBASE_OPEN_URL_KEY_MESSAGE);
+    save_setObj_forKey(userInfo, params,       QBASE_OPEN_URL_KEY_PARAMS);
     
     // UserInfo 转化为Base64
     NSData *data = [NSJSONSerialization dataWithJSONObject:userInfo
@@ -194,6 +203,15 @@ NSString* rightSchemesURL(NSString *schemesURL)
     }
     
     return schemesURL;
+}
+
+#pragma mark
+#pragma mark 字典扩展
+
+void save_setObj_forKey(NSMutableDictionary *dic, id obj, id<NSCopying>key){
+    if ([dic isKindOfClass:[NSMutableDictionary class]] && obj) {
+        [dic setObject:obj forKey:key];
+    }
 }
 
 @end
