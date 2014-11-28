@@ -72,6 +72,10 @@
             completeBlock(NO);
         }
         return;
+    }else {
+        if (completeBlock) {
+            completeBlock(YES);
+        }
     }
     
     NSString *mySchemesURL = [self schemesURL];
